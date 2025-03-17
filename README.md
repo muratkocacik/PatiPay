@@ -21,7 +21,7 @@ PatiPay, sokak hayvanlarının beslenmesine katkıda bulunmayı amaçlayan bir m
 Projeyi klonlamak için terminale aşağıdaki komutu yazın:
 
 ```bash
- git clone https://github.com/kullanici_adi/patipay.git
+ git clone https://github.com/muratkocacik/patipay.git
  cd patipay
 ```
 
@@ -36,10 +36,6 @@ Xcode üzerinden `PatiPay.xcworkspace` dosyasını açarak projeyi çalıştıra
 ## 🤝 Katkıda Bulunma
 
 Katkıda bulunmak için **pull request** açabilirsiniz. Geri bildirimleriniz bizim için çok değerli! 🐶🐱
-
-## 📜 Lisans
-
-Bu proje MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına göz atabilirsiniz.
 
 ---
 
