@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E2496FF42E82906C3C3C28BE /* Pods_PatiPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4717E5FA317101B6815BABF8 /* Pods_PatiPay.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		0E6B5187DEC598D73DCC3A92 /* Pods-PatiPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatiPay.debug.xcconfig"; path = "Target Support Files/Pods-PatiPay/Pods-PatiPay.debug.xcconfig"; sourceTree = "<group>"; };
+		4717E5FA317101B6815BABF8 /* Pods_PatiPay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatiPay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F380DF332D889891001A6476 /* PatiPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatiPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6688FCEFB5A19E640D0EE74 /* Pods-PatiPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatiPay.release.xcconfig"; path = "Target Support Files/Pods-PatiPay/Pods-PatiPay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,17 +30,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2496FF42E82906C3C3C28BE /* Pods_PatiPay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70040E771B243A81976574DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4717E5FA317101B6815BABF8 /* Pods_PatiPay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4EB1508345D0ED9CBD1C339 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E6B5187DEC598D73DCC3A92 /* Pods-PatiPay.debug.xcconfig */,
+				F6688FCEFB5A19E640D0EE74 /* Pods-PatiPay.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F380DF2A2D889891001A6476 = {
 			isa = PBXGroup;
 			children = (
 				F380DF352D889891001A6476 /* PatiPay */,
 				F380DF342D889891001A6476 /* Products */,
+				B4EB1508345D0ED9CBD1C339 /* Pods */,
+				70040E771B243A81976574DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,9 +79,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F380DF412D889893001A6476 /* Build configuration list for PBXNativeTarget "PatiPay" */;
 			buildPhases = (
+				8624156772B3CF9D8FB9B197 /* [CP] Check Pods Manifest.lock */,
 				F380DF2F2D889891001A6476 /* Sources */,
 				F380DF302D889891001A6476 /* Frameworks */,
 				F380DF312D889891001A6476 /* Resources */,
+				6DA5C3382E8C473B12773EB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -64,8 +93,6 @@
 				F380DF352D889891001A6476 /* PatiPay */,
 			);
 			name = PatiPay;
-			packageProductDependencies = (
-			);
 			productName = PatiPay;
 			productReference = F380DF332D889891001A6476 /* PatiPay.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +140,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DA5C3382E8C473B12773EB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PatiPay/Pods-PatiPay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PatiPay/Pods-PatiPay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PatiPay/Pods-PatiPay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8624156772B3CF9D8FB9B197 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PatiPay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F380DF2F2D889891001A6476 /* Sources */ = {
@@ -246,6 +315,7 @@
 		};
 		F380DF422D889893001A6476 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E6B5187DEC598D73DCC3A92 /* Pods-PatiPay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -275,6 +345,7 @@
 		};
 		F380DF432D889893001A6476 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6688FCEFB5A19E640D0EE74 /* Pods-PatiPay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

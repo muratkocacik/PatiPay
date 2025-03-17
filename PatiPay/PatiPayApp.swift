@@ -1,17 +1,19 @@
-//
-//  PatiPayApp.swift
-//  PatiPay
-//
-//  Created by Murat KOCACIK on 17.03.2025.
-//
-
 import SwiftUI
+import Firebase
 
 @main
-struct PatiPayApp: App {
+struct YourAppName: App {
+    
+    init() {
+        // Firebase'i başlatıyoruz
+        FirebaseApp.configure()
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
 }
+
+

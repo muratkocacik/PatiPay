@@ -1,0 +1,6 @@
+framework module Pods_PatiPay {
+  umbrella header "Pods-PatiPay-umbrella.h"
+
+  export *
+  module * { export * }
+}

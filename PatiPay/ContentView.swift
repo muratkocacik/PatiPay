@@ -1,24 +1,35 @@
-//
-//  ContentView.swift
-//  PatiPay
-//
-//  Created by Murat KOCACIK on 17.03.2025.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    @StateObject var appState = AppState()
 
-#Preview {
-    ContentView()
+    var body: some View {
+        if appState.isUserLoggedIn {
+            MainView()
+        } else {
+            NavigationView {
+                VStack {
+                    NavigationLink(destination: LoginView(appState: appState)) {
+                        Text("Giriş Yap")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    
+                    NavigationLink(destination: SignUpView(appState: appState)) {
+                        Text("Kayıt Ol")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                }
+                .padding()
+                .navigationTitle("PatiPay")
+            }
+        }
+    }
 }
